@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.7/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.7/js/responsive.bootstrap5.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/responsive/2.2.7/css/responsive.bootstrap5.min.css" rel="stylesheet">
+    <title>REGISTRO DE PAISES</title>
+</head>
+<style>
+  .btn1{
+                                 text-decoration: none; 
+                              padding: 5px;
+                              font-weight: 600;
+                              font-size: 16px;
+                               color: #ffffff;
+                               background-color: #df0000;
+                               border-radius: 6px;
+                               border: 2px solid #df0000;
+                               box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                            }
+                            .btn1:hover{
+                                text-decoration: none; 
+                              padding: 5px;
+                              font-weight: 600;
+                              font-size: 16px;
+                               color: #000;
+                               background-color:#f8f9fa;
+                               border-radius: 6px;
+                               border: 2px solid #df0000;
+                               }
+   
+                            .btn{
+                              text-decoration: none; 
+                              padding: 5px;
+                              font-weight: 600;
+                              font-size: 16px; 
+                               color: #ffffff;
+                               background-color: #2dc653 ;
+                               border-radius: 6px;
+                               border: 2px solid #2dc653;
+                               box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                               }
+                               .btn:hover{
+                                text-decoration: none; 
+                              padding: 5px;
+                              font-weight: 600;
+                              font-size: 16px;
+                               color: rgb(78, 74, 74);
+                               background-color:#f8f9fa;
+                               border-radius: 6px;
+                               border: 2px solid #2dc653;
+                               }
+                               .row{
+                                   margin-bottom:20px;
+                               }
+                               .cent{
+                                    margin-left:10%;
+                                    margin-right:10%;
+                               }
+                               #div_btn{
+                                    margin-left:41.7%;
+                               }
+
+                               .form-control {
+    background:  		rgb(143, 188, 143, .3);
+    border-style: none;
+    transition: 0.5s ease-in;
+    outline: none;
+    box-shadow: none;
+    border-radius:50px;
+}
+</style>
+<body>
+  <form name="form" action="pais.php" method="post">
+
+    <div class="cent">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#"><h4>Apertura de Paises</h4></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+      </nav>
+      <div class="">
+              <div class="row">
+                  <div class="col">
+                      <label for="cod_pais" class="control-label">Codigo</label>
+                      <input type="text" class="form-control" name="cod_pais" placeholder="Codigo" required><p></p>
+                    </div>
+                    <div class="col">
+                        <label for="validationCustom01">Descripción</label>
+                        <input type="text" class="form-control" name="nomb_pais" placeholder="Descripción" required>
+                      </div>
+                    </div>
+                </div>
+        <div id="div_btn">
+        <button id="btn_proc" class="btn btn-success " input type="submit" > PROCESAR </button>
+        <button id="btn_edit" class="btn1 btn-warning "input type="reset"> BORRAR </button>
+        </div>
+        
+      <div class="">
+
+
+   </form>
+
+
+   
+</body>
+</html>
+
+
